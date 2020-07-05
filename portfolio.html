@@ -95,7 +95,7 @@ function newGame() {
   var rock = 0;
   var paper = 1;
   var scissors = 2;
-  var shoot = prompt("Rock paper or scissors?")
+  var shoot = prompt("rock paper or scissors?")
 
   function computerShoot() {
     for (var i = 0; i < 1; i++) {
@@ -149,7 +149,7 @@ function newGame() {
       computerShoot();
   }
   else if ((shoot !== "rock") || (shoot !== "paper") || (shoot !== "scissors")) {
-    alert("''" + shoot + "''" + " is invalid value. Please enter either ''rock'' ''paper'' or ''scissors''.") 
+    alert("''" + shoot + "''" + " is invalid value. Please enter either ''rock'' ''paper'' or ''scissors''. Case is sensative.") 
   }
 }
 
