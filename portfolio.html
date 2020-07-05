@@ -40,7 +40,7 @@
                       <!-- Sub-Column #1 Rock Paper Scissors game click to play! -->
                       <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="newGame()">
                         <img src="Assets/Images/rock-paper-scissors.png" alt="rock-paper-scissors"  class="portfolioIMG">
-                        <div class="IMGlabel">Rock Paper Scissors Game (Click Me)</div>
+                        <div class="IMGlabel">rock paper scissors game (Click Me)</div>
                       </div>
                       <!-- Sub-Column #2 Trivia game click to play! -->
                       <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="newTrivia()">
@@ -95,7 +95,7 @@ function newGame() {
   var rock = 0;
   var paper = 1;
   var scissors = 2;
-  var shoot = prompt("Rock paper or scissors?")
+  var shoot = prompt("rock paper or scissors?")
 
   function computerShoot() {
     for (var i = 0; i < 1; i++) {
@@ -151,29 +151,6 @@ function newGame() {
   else if ((shoot !== "rock") || (shoot !== "paper") || (shoot !== "scissors")) {
     alert("''" + shoot + "''" + " is invalid value. Please enter either ''rock'' ''paper'' or ''scissors''.") 
   }
-}
-
-function newTrivia() {
-  var question = prompt("What year was the USA Declaration of Independance signed?")
-
-  if (question === "1776") {
-    alert("That is correct! The Declaration of Independance was signed in 1776.")
-  }
-  else if (question !== "1776") {
-    alert("That is incorrect! The Declaration of Independance was not signed in " + question +". It was signed in 1776")
-  }
-}
-
-function catMeow() {
-  alert("The cat says ''meow''.");
-}
-
-function dogBark() {
-  alert("The dog says ''bark, bark''!");
-}
-
-function hamsterSquek() {
-  alert("The hamster says ''squeak, squeak''!");
 }
 
 </script>
