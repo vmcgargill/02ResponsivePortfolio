@@ -1,3 +1,31 @@
+body {
+    background-color: lightgray;
+}
+
+.navbar-brand {
+    background-color: black;
+    padding: 10px;
+}
+
+.nav-item:hover {
+    background-color: black;
+}
+
+.container {
+    border: 3px;
+    border-width: 100%;
+    border-color: black;
+    border-style: solid;
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+hr.solid {
+    border-top: 2px solid black;
+}
+
 .footer {
     background-color: #212529;
     text-align: center;
@@ -5,5 +33,5 @@
 }
 
 .footer p {
-    color: white;
+    color: #007bff;
 }
