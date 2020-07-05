@@ -26,7 +26,7 @@ body {
 .julius-caesar {
     width: 30%;
     height: auto;
-    min-width: 280px;
+    min-width: 200px;
     /* The only way to get the text to wrap around the image to look exactly like the example was to use floats here. 
     Floats are not entirely necessary in this situation as the site looks just as good with the text below the picture. 
     It all comes down to personal preference. There was an alternative to use Bootstrap columns 
