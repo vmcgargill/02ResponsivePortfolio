@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Nav bar content -->
+    <!-- Navbar content -->
     <nav class="navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">Responsive Portfolio</a>
         <div>
@@ -21,16 +21,58 @@
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="portfolio.html">Portfolio<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
           </ul>
         </div>
       </nav>
 
-      <!-- Content container -->
-      <div class="container">
-          <h1>Hello World! This is the portfolio page.</h1>
-      </div>
+    <!-- Container content -->
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <!-- Header -->
+                    <h1>Portfolio</h1>
+                    <hr class="solid">
+                    <!-- Sub-row #1 -->
+                    <div class="row">
+                      <!-- Sub-Column #1 Rock Paper Scissors game click to play! -->
+                      <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="newGame()">
+                        <img src="Assets/Images/rock-paper-scissors.png" alt="rock-paper-scissors"  class="portfolioIMG">
+                        <div class="IMGlabel">Rock Paper Scissors Game (Click Me)</div>
+                      </div>
+                      <!-- Sub-Column #2 Trivia game click to play! -->
+                      <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="newTrivia()">
+                        <img src="Assets/Images/trivia.jpg" alt="trivia" class="portfolioIMG">
+                        <div class="IMGlabel">Trivia Game (Click Me)</div>
+                      </div>
+                    </div>
+                    <!-- Sub-row #2 -->
+                    <div class="row">
+                      <!-- Sub-Column #1 Click me to see the cat meow! -->
+                      <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="catMeow()">
+                        <img src="Assets/Images/cat.jpg" alt="cat" class="portfolioIMG">
+                        <div class="IMGlabel">Here is a cat</div>
+                      </div>
+                      <!-- Sub-Column #2 Click me to see the dog bark! -->
+                      <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="dogBark()">
+                        <img src="Assets/Images/dog.jpg" alt="dog" class="portfolioIMG">
+                        <div class="IMGlabel">Here is a dog</div>
+                      </div>
+                    </div>
+                    <!-- Sub-row #3 -->
+                    <div class="row">
+                      <!-- Sub-Column #1 Click me to see the hamster squeak! -->
+                      <div class="col-sm-6 col-md-6 col-lg-6" id="portfolio-widget" onclick="hamsterSquek()">
+                        <img src="Assets/Images/hamster.jpeg" alt="hamster" class="portfolioIMG">
+                        <div class="IMGlabel">Here is a hamster</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer -->
     <div class="footer">
@@ -46,4 +88,94 @@
     </div>
     
 </body>
+
+<script type="text/javascript">
+
+function newGame() {
+  var rock = 0;
+  var paper = 1;
+  var scissors = 2;
+  var shoot = prompt("Rock paper or scissors?")
+
+  function computerShoot() {
+    for (var i = 0; i < 1; i++) {
+    var num = Math.random() * 3;
+    var num2 = Math.floor(num);
+        
+    if (num2 === 0) {
+        alert("Computer chose rock!")
+    }
+    else if (num2 === 1) {
+        alert("Computer chose paper!")
+    }
+    else if (num2 === 2) {
+        alert("Computer chose scissors!")
+    }
+  }
+    if (shoot === num2) {
+        alert("Tie!")
+    }
+    else if (shoot === rock && num2 === paper) {
+      alert("Paper beats rock! You lose.")
+    }
+    else if (shoot === paper && num2 === scissors) {
+      alert("Scissors beats paper! You lose.")
+    }
+    else if (shoot === scissors && num2 === rock) {
+      alert("Rock beats scissors! you lose.")
+    }
+    else if (shoot === rock && num2 === scissors) {
+      alert("Rock beats scissors! You win.")
+    }
+    else if (shoot === paper && num2 === rock) {
+      alert ("Paper beats rock! You win.")
+    }
+    else if (shoot === scissors && num2 === paper) {
+      alert ("Scissors beats paper! You win.")
+    }
+  }
+
+
+  if (shoot === "rock") {
+      shoot = 0;
+      computerShoot();
+  }
+  else if (shoot === "paper") {
+      shoot = 1;
+      computerShoot();
+  }
+  else if (shoot === "scissors") {
+      shoot = 2;
+      computerShoot();
+  }
+  else if ((shoot !== "rock") || (shoot !== "paper") || (shoot !== "scissors")) {
+    alert("''" + shoot + "''" + " is invalid value. Please enter either ''rock'' ''paper'' or ''scissors''.") 
+  }
+}
+
+function newTrivia() {
+  var question = prompt("What year was the USA Declaration of Independance signed?")
+
+  if (question === "1776") {
+    alert("That is correct! The Declaration of Independance was signed in 1776.")
+  }
+  else if (question !== "1776") {
+    alert("That is incorrect! The Declaration of Independance was not signed in " + question +". It was signed in 1776")
+  }
+}
+
+function catMeow() {
+  alert("The cat says ''meow''.");
+}
+
+function dogBark() {
+  alert("The dog says ''bark, bark''!");
+}
+
+function hamsterSquek() {
+  alert("The hamster says ''squeak, squeak''!");
+}
+
+</script>
+
 </html>
