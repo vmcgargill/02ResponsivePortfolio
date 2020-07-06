@@ -100,6 +100,9 @@ hr.solid {
     /* Set the width and height of the portfolio widget to auto so it adjusts according to the image size. */
     height: auto;
     width: auto;
+    margin: 30px;
+    max-width: 400px;
+    max-height: 400px;
   }
 
 #portfolio-widget:hover {
