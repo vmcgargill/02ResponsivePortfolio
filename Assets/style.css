@@ -74,7 +74,8 @@ hr.solid {
     margin-right: auto;
     /* The hamster image was the most difficult one to make responsive because of the image size; it's not as tall as the other pics. 
     As a result I set the minimum image height to 125px for all pics on the portfolio. Again it would have been 
-    better if I chose an image that was more square than rectangle and had a 4:3 ratio instead of a 16:9 ratio.*/
+    better if I chose an image that was more square than rectangle and had a 4:3 ratio instead of a 16:9 ratio.
+    I could have increased the min height or change it to a set height but that would have caused the images to streatch.*/
     min-height: 125px;
 }
 
