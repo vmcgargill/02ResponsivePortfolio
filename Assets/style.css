@@ -27,10 +27,6 @@ body {
     width: 30%;
     height: auto;
     min-width: 200px;
-    /* The only way to get the text to wrap around the image to look exactly like the example was to use floats here. 
-    Floats are not entirely necessary in this situation as the site looks just as good with the text below the picture. 
-    It all comes down to personal preference. There was an alternative to use Bootstrap columns 
-    but that would not accomplish the text beeing wrapped around the image like in the example. */
     float: left;
     padding: 30px;
 }
@@ -63,19 +59,11 @@ hr.solid {
 
 
 .portfolioIMG {
-    /* This assignmnet would have been easier if I had I chosen 5 images that were all exactly the same size. 
-    But they were all different sizes so I had to set the width and height to 100% for them to fit 
-    snug in the portfolio widget div. As a result, the images are stretched to fit. But it would have 
-    been a better design if I just had 5 images all of them square 200px x 200px or something along those lines.*/
     width: 100%;
     height: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* The hamster image was the most difficult one to make responsive because of the image size; it's not as tall as the other pics. 
-    As a result I set the minimum image height to 125px for all pics on the portfolio. Again it would have been 
-    better if I chose an image that was more square than rectangle and had a 4:3 ratio instead of a 16:9 ratio.
-    I could have increased the min height or change it to a set height but that would have caused the images to streatch.*/
     min-height: 125px;
 }
 
@@ -90,7 +78,6 @@ hr.solid {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* Set the image label to 95 % so it always adjusts according to the portfolio-widget. */
     width: 95%;
     text-align: center;
   }
@@ -98,7 +85,6 @@ hr.solid {
   #portfolio-widget {
     border-color: black;
     border-style: solid;
-    /* Set the width and height of the portfolio widget to auto so it adjusts according to the image size. */
     height: auto;
     width: auto;
     margin: 30px;
@@ -120,13 +106,10 @@ hr.solid {
 
 /* Added additional constraints for when the screen is 779px wide */
 @media screen and (max-width: 779px) {
-    /* The image lable overlaps the div when the screen size is reduced to be under 779px wide. 
-    As a reult I got rid of the padding when on the image label when the screen size reduces. */
     .IMGlabel {
         padding: 0px;
     }
 
-    /* To make this site look more like the example I changed the width of the nave bar title to 100% at this screen size. */
     .navbar-brand {
         width: 100%;
     }
